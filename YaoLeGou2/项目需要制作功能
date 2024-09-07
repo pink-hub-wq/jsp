@@ -1,0 +1,43 @@
+需求
+商品管理模块
+	查看所有商品doGet(1个方法)
+		加载遍历数据
+		根据商品名、商品类型查看商品
+	查看商品评论
+		加载遍历数据
+		删除单条评论
+		删除多条评论
+	管理分类类型
+		加载遍历数据
+		添加分类
+		删除分裂
+		根据id把数据显示到界面上
+		根据id修改数据
+设计
+	查看所有商品
+	1.建ShopSelectServlet类、还需要补充dao、imp相关文件方法
+	2.建doGet方法
+	3.State == null方法内加载信息、同时判断输入的商品名是否等于空、类型是否等于空
+	
+	查看商品评论
+	1.建PingLunServlet类、还需要补充dao、imp相关文件方法
+	2.建doGet方法
+	3.State == null方法内加载信息、同时判断输入的评论文本是否等于空
+	4.State==del方法内删除单条评论
+	5.State==delAll方法内删除多条评论
+	
+	管理分类类型
+	1.建TypeAdminServlet类、还需要补充dao、imp相关文件方法
+	2.建doGet方法
+	3.State == null方法内加载信息、同时判断输入的分类文本是否等于空
+	4.State == add方法内添加分类信息，跳转至加载界面
+	5.State==del方法内删除单条分类
+	6.State==SelectUpdate，根据id查询分类信息
+	7.State==Update,根据id与新输入的文本修改类型
+	
+	8个方法
+	
+ShopViewServlet中第66行，75行在完成ShopTypeDaoImpl的GetAllShopTypeInfo方法后请把注释取消以免影响前台显示效果
+WelcomeServlet中第41行，66行在完成PingLunDao的Count方法后请把注释取消以免影响前台显示效果
+FaBuShopServlet中第47,48行在完成ShopTypeDaoImpl的GetAllShopTypeInfo方法后请把注释取消以免影响前台显示效果
+	

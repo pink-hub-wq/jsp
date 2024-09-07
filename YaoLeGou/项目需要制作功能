@@ -1,0 +1,19 @@
+需求
+	管理分类类型
+		加载遍历数据
+		添加分类
+		删除分裂
+		根据id把数据显示到界面上
+		根据id修改数据
+设计
+	管理分类类型
+	1.建TypeAdminServlet类、还需要补充dao、imp相关文件方法
+	2.建doGet方法
+	3.State == null方法内加载信息、同时判断输入的分类文本是否等于空
+	4.State == add方法内添加分类信息，跳转至加载界面
+	5.State==del方法内删除单条分类
+	6.State==SelectUpdate，根据id查询分类信息
+	7.State==Update,根据id与新输入的文本修改类型
+	
+	8个方法
+	
